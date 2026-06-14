@@ -7,174 +7,199 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
 body{
-    background:#0f0f0f;
-    color:#fff;
+background:#0f0f0f;
+color:white;
 }
 
 .hero{
-    min-height:100vh;
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
-    url('banner.jpg');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px;
-}
-
-.profile{
-    max-width:900px;
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+url('banner.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
 }
 
 .profile img{
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #fff;
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
 }
 
 .profile h1{
-    margin-top:20px;
-    font-size:3rem;
-}
-
-.profile p{
-    margin-top:15px;
-    font-size:1.1rem;
-    line-height:1.7;
+font-size:3rem;
+margin-top:20px;
 }
 
 .badge{
-    display:inline-block;
-    margin-top:15px;
-    background:#c70039;
-    padding:10px 20px;
-    border-radius:30px;
-    font-weight:bold;
+margin-top:15px;
+display:inline-block;
+padding:10px 20px;
+border-radius:30px;
+background:#ff0055;
+font-weight:bold;
+}
+
+.profile p{
+margin-top:15px;
+line-height:1.6;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 35px;
-    background:#ff0055;
-    color:#fff;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
+display:inline-block;
+padding:15px 30px;
+background:#ff0055;
+color:white;
+text-decoration:none;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin-top:20px;
+font-weight:bold;
 }
 
 .section{
-    padding:80px 8%;
+padding:70px 8%;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:2.5rem;
+text-align:center;
+font-size:2.3rem;
+margin-bottom:40px;
 }
 
 .pricing{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-    background:#1b1b1b;
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-}
-
-.card h3{
-    margin-bottom:15px;
+background:#1b1b1b;
+padding:30px;
+border-radius:20px;
+text-align:center;
 }
 
 .price{
-    font-size:2rem;
-    color:#ff0055;
-    margin-bottom:20px;
-}
-
-.live-box{
-    background:#1b1b1b;
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-}
-
-.live-player{
-    height:400px;
-    background:#000;
-    border-radius:15px;
-    margin-top:20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+font-size:2rem;
+color:#ff0055;
+margin:20px 0;
 }
 
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .gallery-item{
-    background:#1b1b1b;
-    border-radius:15px;
-    overflow:hidden;
+background:#1b1b1b;
+border-radius:15px;
+overflow:hidden;
 }
 
-.gallery img,
-.gallery video{
-    width:100%;
-    height:280px;
-    object-fit:cover;
+.gallery-item img,
+.gallery-item video{
+width:100%;
+height:300px;
+object-fit:cover;
 }
 
 .buy-btn{
-    display:block;
-    text-align:center;
-    padding:15px;
-    background:#ff0055;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+display:block;
+padding:15px;
+background:#ff0055;
+text-align:center;
+text-decoration:none;
+color:white;
+font-weight:bold;
+border:none;
+cursor:pointer;
+width:100%;
+}
+
+.live-box{
+background:#1b1b1b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.live-player{
+height:400px;
+background:black;
+border-radius:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:20px;
+}
+
+.chat-button{
+position:fixed;
+right:25px;
+bottom:25px;
+background:#0088cc;
+color:white;
+text-decoration:none;
+padding:15px 20px;
+border-radius:50px;
+font-weight:bold;
+z-index:9999;
+}
+
+#paymentModal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.85);
+z-index:99999;
+}
+
+.payment-content{
+background:#1b1b1b;
+max-width:400px;
+margin:100px auto;
+padding:30px;
+border-radius:20px;
+text-align:center;
 }
 
 .footer{
-    text-align:center;
-    padding:40px;
-    background:#090909;
+text-align:center;
+padding:40px;
+background:#080808;
 }
 
 @media(max-width:768px){
 .gallery{
-    grid-template-columns:1fr;
+grid-template-columns:1fr;
 }
+
 .profile h1{
-    font-size:2rem;
+font-size:2rem;
 }
 }
 </style>
 </head>
-
 <body>
 
 <section class="hero">
@@ -184,26 +209,28 @@ body{
 
 <h1>Nicole Seifert</h1>
 
-<div class="badge">54 • +17 premium Membership Access</div>
+<div class="badge">
+54 • Member Access
+</div>
 
 <p>
-Welcome to Nicole Seifert's Official Premium Fan Page.
-Join the community, enjoy exclusive livestreams,
-special content, and member-only experiences.
+Welcome to Nicole Seifert Official Fan Page.
+Join the community, watch livestreams,
+and enjoy exclusive member experiences.
 </p>
 
 <p>
 Germany • USA • United Kingdom
 </p>
 
-<a href="#membership" class="btn">
-SUBSCRIBE NOW
-</a>
+<button onclick="openPaymentOptions()" class="btn">
+Subscribe Now
+</button>
 
 </div>
 </section>
 
-<section class="section" id="membership">
+<section class="section">
 
 <h2 class="section-title">
 Membership Plans
@@ -214,19 +241,19 @@ Membership Plans
 <div class="card">
 <h3>Weekly</h3>
 <div class="price">$299</div>
-<a href="#" class="btn">Subscribe</a>
+<button onclick="openPaymentOptions()" class="btn">Subscribe</button>
 </div>
 
 <div class="card">
 <h3>Monthly</h3>
 <div class="price">$599</div>
-<a href="#" class="btn">Subscribe</a>
+<button onclick="openPaymentOptions()" class="btn">Subscribe</button>
 </div>
 
 <div class="card">
 <h3>Yearly</h3>
 <div class="price">$1299</div>
-<a href="#" class="btn">Subscribe</a>
+<button onclick="openPaymentOptions()" class="btn">Subscribe</button>
 </div>
 
 </div>
@@ -246,12 +273,13 @@ Premium Membership
 <div class="price">$2500</div>
 
 <p>
-Exclusive member perks, premium livestream access,
-special content releases and VIP experiences.
+Exclusive member access and premium experiences.
 </p>
 
-<a href="#" class="btn">
-Upgrade to Premium
+<a href="https://t.me/Managementchatbozx"
+target="_blank"
+class="btn">
+Upgrade To Premium
 </a>
 
 </div>
@@ -266,10 +294,10 @@ Livestream
 
 <div class="live-box">
 
-<h3>Upcoming Livestream</h3>
+<h3>Live Stream</h3>
 
 <div class="live-player">
-[ INPUTE COUPON INVITE CODE ]
+Insert Livestream Embed Here
 </div>
 
 </div>
@@ -284,56 +312,27 @@ Photo Gallery
 
 <div class="gallery">
 
-<!-- Replace image1.jpg etc -->
+<!-- Duplicate pattern for all 10 images -->
 
 <div class="gallery-item">
 <img src="image1.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
+<button onclick="openPaymentOptions()" class="buy-btn">
+Buy Access
+</button>
 </div>
 
 <div class="gallery-item">
 <img src="image2.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
+<button onclick="openPaymentOptions()" class="buy-btn">
+Buy Access
+</button>
 </div>
 
 <div class="gallery-item">
 <img src="image3.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
-</div>
-
-<div class="gallery-item">
-<img src="image4.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
-</div>
-
-<div class="gallery-item">
-<img src="image5.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
-</div>
-
-<div class="gallery-item">
-<img src="image6.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
-</div>
-
-<div class="gallery-item">
-<img src="image7.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
-</div>
-
-<div class="gallery-item">
-<img src="image8.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
-</div>
-
-<div class="gallery-item">
-<img src="image9.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
-</div>
-
-<div class="gallery-item">
-<img src="image10.jpg">
-<a href="#" class="buy-btn">Buy Access</a>
+<button onclick="openPaymentOptions()" class="buy-btn">
+Buy Access
+</button>
 </div>
 
 </div>
@@ -350,61 +349,94 @@ Video Gallery
 
 <div class="gallery-item">
 <video controls src="video1.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
+
+<a href="https://phantom.com/user/traceyomilian028"
+target="_blank"
+class="buy-btn">
+Request Dropbox Access
+</a>
 </div>
 
 <div class="gallery-item">
 <video controls src="video2.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
+
+<a href="https://phantom.com/user/traceyomilian028"
+target="_blank"
+class="buy-btn">
+Request Dropbox Access
+</a>
 </div>
 
 <div class="gallery-item">
 <video controls src="video3.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
-</div>
 
-<div class="gallery-item">
-<video controls src="video4.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
-</div>
-
-<div class="gallery-item">
-<video controls src="video5.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
-</div>
-
-<div class="gallery-item">
-<video controls src="video6.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
-</div>
-
-<div class="gallery-item">
-<video controls src="video7.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
-</div>
-
-<div class="gallery-item">
-<video controls src="video8.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
-</div>
-
-<div class="gallery-item">
-<video controls src="video9.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
-</div>
-
-<div class="gallery-item">
-<video controls src="video10.mp4"></video>
-<a href="#" class="buy-btn">Watch Video</a>
+<a href="https://phantom.com/user/traceyomilian028"
+target="_blank"
+class="buy-btn">
+Request Dropbox Access
+</a>
 </div>
 
 </div>
 
 </section>
 
+<div id="paymentModal">
+
+<div class="payment-content">
+
+<h2>Select Payment Method</h2>
+
+<br>
+
+<a href="https://phantom.com/user/traceyomilian028"
+class="btn">
+Bitcoin
+</a>
+
+<br><br>
+
+<a href="https://phantom.com/user/traceyomilian028"
+class="btn">
+Ethereum
+</a>
+
+<br><br>
+
+<a href="https://phantom.com/user/traceyomilian028"
+class="btn">
+Solana
+</a>
+
+<br><br>
+
+<button onclick="closePaymentOptions()" class="btn">
+Close
+</button>
+
+</div>
+
+</div>
+
+<a href="https://t.me/Officalprivateaccount7"
+target="_blank"
+class="chat-button">
+💬 Chat With Me
+</a>
+
 <footer class="footer">
-<p>© 2022 Nicole Seifert Official Fan Page</p>
+© 2025 Nicole Seifert Official Fan Page
 </footer>
+
+<script>
+function openPaymentOptions(){
+document.getElementById("paymentModal").style.display="block";
+}
+
+function closePaymentOptions(){
+document.getElementById("paymentModal").style.display="none";
+}
+</script>
 
 </body>
 </html>
